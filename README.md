@@ -1,5 +1,5 @@
-# Unsupervised Pixel Level Domain Adaptation with Generative Adversarial Networks
-A PyTorch implementation of [Unsupervised Pixel Level Domain Adaptation with Generative Adversarial Networks](https://arxiv.org/abs/1603.08155)
+# Unsupervised Pixel-Level Domain Adaptation with Generative Adversarial Networks
+A PyTorch implementation of [Unsupervised Pixel-Level Domain Adaptation with Generative Adversarial Networks](https://arxiv.org/abs/1603.08155)
 
 ## Table of Contents
 - [Unsupervised Pixel Level Domain Adaptation with Generative Adversarial Networks](#unsupervised-pixel-level-domain-adaptation-with-generative-adversarial-networks)
