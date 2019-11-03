@@ -8,6 +8,7 @@ def get_arguments():
     parser.add_argument('--lr', type=float, default=0.001, help='learning rate')
     parser.add_argument('--decay_every', type=int, default=20000, help='decay interval for learning rate')
     parser.add_argument('--lr_decay', type=float, default=0.95, help='decay rate for learning rate')
+    parser.add_argument('--l2_decay', type=float, default=1e-5, help='lambda for l2 regularization/weight decay')
     parser.add_argument('--dropout_prob', type=float, default=0.9, help='dropout retention rate for discriminator')
     parser.add_argument('--lrelu_slope', type=float, default=0.2, help='slope of leaky relu function')
     parser.add_argument('--noise_mu', type=float, default=0.0, help='mean of gaussian noise vector')

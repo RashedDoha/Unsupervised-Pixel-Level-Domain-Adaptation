@@ -27,13 +27,13 @@ def train_gan(opt):
     adversarial_loss = nn.BCELoss()
     task_loss = nn.CrossEntropyLoss()
 
-    optim_G = optim.Adam(itertools.chain(generator.parameters(), classifier.parameters()), lr=lr, weight_decay=l2_decay, betas=(opt_beta_1, opt_beta_2))
-    optim_D = optim.Adam(discriminator.parameters(), lr=lr, weight_decay=l2_decay, betas=(opt_beta_1, opt_beta_2))
-    optim_C = optim.Adam(classifier.parameters(), lr=lr, weight_decay=l2_decay, betas=(opt_beta_1, opt_beta_2))
+    optim_G = optim.Adam(itertools.chain(generator.parameters(), classifier.parameters()), lr=opr.lr, weight_decay=opt.l2_decay, betas=(opt.opt_beta_1, opt.opt_beta_2))
+    optim_D = optim.Adam(discriminator.parameters(), lr=opt.lr, weight_decay=l2_decay, betas=(opt.opt_beta_1, opt.opt_beta_2))
+    optim_C = optim.Adam(classifier.parameters(), lr=opt.lr, weight_decay=l2_decay, betas=(opt.opt_beta_1, opt.opt_beta_2))
 
-    scheduler_G = optim.lr_scheduler.StepLR(optim_G, step_size=decay_every, gamma=lr_decay)
-    scheduler_D = optim.lr_scheduler.StepLR(optim_D, step_size=decay_every, gamma=lr_decay)
-    scheduler_C = optim.lr_scheduler.StepLR(optim_C, step_size=decay_every, gamma=lr_decay)
+    scheduler_G = optim.lr_scheduler.StepLR(optim_G, step_size=opt.decay_every, gamma=opt.lr_decay)
+    scheduler_D = optim.lr_scheduler.StepLR(optim_D, step_size=opt.decay_every, gamma=opt.lr_decay)
+    scheduler_C = optim.lr_scheduler.StepLR(optim_C, step_size=opt.decay_every, gamma=opt.lr_decay)
 
     source_loader, target_loader = dataloaders.get_dataloaders(opt)
 
