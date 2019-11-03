@@ -1,5 +1,15 @@
+import os
 import torch
 from torchvision.datasets.utils import download_and_extract_archive, makedir_exist_ok
+from PIL import Image
+from torchvision import datasets
+import pickle
+
+"""Dataset setting and data loader for MNIST-M.
+Modified from
+https://github.com/pytorch/vision/blob/master/torchvision/datasets/mnist.py
+CREDIT: https://github.com/eriklindernoren
+"""
 
 class MNISTM(torch.utils.data.Dataset):
     """`MNISTM Dataset.

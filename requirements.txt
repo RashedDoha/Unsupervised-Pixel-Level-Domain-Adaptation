@@ -1,0 +1,9 @@
+numpy
+matplotlib
+pickle
+PIL
+gzip
+errno
+tensorboard
+torch
+torchvision

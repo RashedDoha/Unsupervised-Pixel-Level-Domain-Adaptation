@@ -1,1 +1,5 @@
 __pycache__/
+.DS_STORE
+datasets/data
+*/.DS_STORE
+*/__pycache__

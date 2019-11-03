@@ -1,5 +1,6 @@
 from config import *
 from datasets import dataloaders
+import torch
 def main():
     parser = get_arguments()
     opt = parser.parse_args()
