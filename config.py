@@ -25,6 +25,9 @@ def get_arguments():
     parser.add_argument('--gen_loss_weight', type=float, default=0.011, help='loss weight for generator')
     parser.add_argument('--classifier_loss_weight', type=float, default=0.01, help='loss weight for classifier')
     parser.add_argument('--data_download_dir', type=str, default='data', help='directory to download datasets')
+    parser.add_argument('--tensorboard_logs', type=str, default='logs', help='directory to save tensorboard logs')
+    parser.add_argument('--log_n_images', type=int, default=4, help='number of images to log in each grid of tensorboard images')
+    parser.add_argument('--log_every', type=int, default=50, help='batch interval to log training progress')
     return parser
 
 if __name__ == '__main__':

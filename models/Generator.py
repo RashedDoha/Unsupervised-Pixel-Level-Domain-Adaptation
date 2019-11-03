@@ -1,5 +1,5 @@
 import torch.nn as nn
-from './models' import ResidualBlock
+from models.resblock import ResidualBlock
 
 class Generator(nn.Module):
     def __init__(self, opt, l1_features=64):
